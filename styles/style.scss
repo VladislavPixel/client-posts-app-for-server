@@ -1,0 +1,99 @@
+// БАЗОВЫЙ ШРИФТ НА ВСЕМ САЙТЕ ==================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap&subset=cyrillic-ext");
+
+// ДЕФОЛТНЫЙ ШРИФТ ВСЕГО ПРОЕКТА, тот который преобладает =======================================================
+$fontFamily: "Manrope", sans-serif;
+//===============================================================================================================
+
+// ОБНУЛЯЮЩИЕ СТИЛИ =============================================================================================
+@import "ziro";
+//===============================================================================================================
+
+// ОСНОВНОЙ КОНТЕЙНЕР
+#__next{
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+// ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА
+._container{
+	max-width: 993px;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+
+.content-container{
+	flex: 1 1 auto;
+	margin: 46px 0px;
+	@media(max-width: 400px) {
+		margin: 25px 0px 26px 0px;
+	}
+	&__post{
+		@media(max-width: 400px) {
+			margin-top: -15px;
+		}
+	}
+}
+
+.title{
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 36px;
+	color: black;
+}
+
+// СТИЛИ НЕБОЛЬШИХ КОМПОНЕНТОВ
+.universal-btn{
+	transition: all 0.5s ease 0s;
+	background: #FF008A;
+	border-radius: 5px;
+	padding: 10px;
+	min-height: 50px;
+	min-width: 200px;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	text-align: center;
+	border: 1px solid #FF008A;
+	filter: drop-shadow(0px 4px 4px rgba(50, 50, 71, 0.08));
+	@media(min-width: 992px) {
+		&:hover{
+			background: #ffffff;
+			color: #FF008A;
+		}
+	}
+	@media(max-width: 730px) {
+		min-width: auto;
+		font-size: 16px;
+	}
+	@media(max-width: 500px) {
+		min-height: auto;
+		padding: 5px;
+	}
+	&.icon-btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+// Imports ФАЙЛОВ ДРУГИХ СУЩНОСТЕЙ ==============================================================================
+@import "spinner";
+@import "header";
+@import "search";
+@import "footer";
+@import "notFound";
+@import "posts";
+@import "form";
+@import "authorization";
+@import "postsPage";
+@import "postPage";
+@import "smallMessage";
+@import "pagination";

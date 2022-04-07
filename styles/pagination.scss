@@ -1,0 +1,130 @@
+.pagination-body{
+	display: flex;
+	justify-content: flex-end;
+	&__flag-left{
+		width: 10px;
+		height: 2px;
+		border-radius: 3px;
+		background: #aeaeae;
+		transform: rotate(35deg);
+		position: relative;
+		bottom: -4px;
+		&:before{
+			transition: background 0.4s ease 0s;
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			border-radius: 3px;
+			background: #aeaeae;
+			transform: rotate(-70deg);
+			top: -4px;
+			left: -3px;
+		}
+	}
+	&__flag-right{
+		width: 10px;
+		height: 2px;
+		border-radius: 3px;
+		background: #aeaeae;
+		transform: rotate(-35deg);
+		position: relative;
+		bottom: -4px;
+		&:before{
+			transition: background 0.4s ease 0s;
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 2px;
+			border-radius: 3px;
+			background: #aeaeae;
+			transform: rotate(70deg);
+			top: -5px;
+			left: 3px;
+		}
+	}
+	&__flag-left,&__flag-right{
+		transition: background 0.4s ease 0s;
+	}
+	&__arrow-wrap{
+		opacity: 0;
+		visibility: hidden;
+		transition: border 0.4s ease 0s, opacity 0.4s ease 0s;
+		width: 32px;
+		height: 32px;
+		border: 1px solid #aeaeae;
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		&_prev{
+			margin-right: 7px;
+		}
+		&_next{
+			margin-left: 7px;
+		}
+		&.active{
+			opacity: 1;
+			visibility: visible;
+		}
+		@media(min-width: 992px){
+			&:hover{
+				border: 1px solid #FF008A;
+				.pagination-body__flag-right,.pagination-body__flag-left{
+					background: #FF008A;
+					&:before{
+						background: #FF008A;
+					}
+				}
+			}
+		}
+	}
+	&__list{
+		display: flex;
+		align-items: center;
+		li{
+			transition: border 0.4s ease 0s;
+			width: 32px;
+			height: 32px;
+			border: 1px solid #aeaeae;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-right: 8px;
+			cursor: pointer;
+			&:last-child{
+				margin-right: 0;
+			}
+			&.active{
+				border: 1px solid #FF008A;
+				.pagination-body__pagin{
+					color: #FF008A;
+				}
+			}
+			@media(min-width: 992px) {
+				&:hover{
+					border: 1px solid #FF008A;
+					.pagination-body__pagin{
+						color: #FF008A;
+					}
+				}
+			}
+		}
+	}
+	&__pagin{
+		transition: color 0.4s ease 0s;
+		font-weight: 700;
+		line-height: 20px;
+		color: black;
+	}
+	&__delimiter{
+		pointer-events: none;
+		span{
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+}

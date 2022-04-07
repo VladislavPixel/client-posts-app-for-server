@@ -1,0 +1,22 @@
+.small-message{
+   &__block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   }
+   &__icon{
+      width: 70px;
+      height: 70px;
+      flex: 0 0 70px;
+      margin-bottom: 7px;
+   }
+   &__title{
+      margin-bottom: 10px;
+   }
+   &__sub-title{
+      font-size: 16px;
+      line-height: 115%;
+   }
+}

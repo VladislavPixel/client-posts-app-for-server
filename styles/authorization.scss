@@ -1,0 +1,41 @@
+.authorization-block{
+	&__title{
+		margin: 40px 0;
+		text-align: center;
+		@media(max-width: 400px){
+			font-size: 25px;
+			margin: 20px 0;
+		}
+	}
+	&__icon-btn{
+		width: 25px;
+		height: 25px;
+		margin-right: 5px;
+	}
+	&__container-form{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__form{
+		flex: 0 1 500px;
+	}
+	&__button-sub{
+		transition: all 0.4s ease 0s;
+		align-self: center;
+		padding: 15px;
+		font-size: 20px;
+		background: #FF008A;
+		border-radius: 5px;
+		color: #ffffff;
+		&.active{
+			pointer-events: none;
+			opacity: 0.7;
+			background: #820145;
+			color: black;
+		}
+		@media(max-width: 400px) {
+			font-size: 16px;
+		}
+	}
+}

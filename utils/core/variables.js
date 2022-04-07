@@ -1,0 +1,1 @@
+export const MAX_POSTS_ON_PAGE = 9

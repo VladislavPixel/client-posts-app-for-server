@@ -1,0 +1,53 @@
+.form{
+	display: flex;
+	flex-direction: column;
+}
+
+.text-field{
+	margin-bottom: 25px;
+	&__label{
+		font-size: 18px;
+		font-weight: 600;
+		color: rgb(56, 56, 56);
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	&__error{
+		color: red;
+		font-size: 15px;
+		margin-top: 7px;
+		font-weight: 600;
+	}
+	&__wrap-input{
+		border-radius: 10px;
+		overflow: hidden;
+		padding: 10px 45px 10px 10px;
+		background: rgba(60, 60, 67, 0.1);
+		&_password{
+			position: relative;
+			img{
+				position: absolute;
+				width: 33px;
+				height: 33px;
+				right: 6px;
+				top: 50%;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				width: 45px;
+				height: 100%;
+				right: 0;
+				top: 0;
+				background: #FF008A;
+			}
+		}
+	}
+	&__input{
+		width: 100%;
+		font-size: 18px;
+		color: rgb(59, 59, 59);
+	}
+}
